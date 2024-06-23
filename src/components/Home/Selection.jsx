@@ -5,10 +5,13 @@ import { newGreetingMessage, existingGreetingMessage } from "@/utils/dialouges";
 const Selection = ({ count }) => {
   const router = useRouter();
 
-  if (count <= newGreetingMessage.length - 1 || count <= 3) {
+  if (count <= 3) {
     return;
   }
-  if (count === existingGreetingMessage.length) {
+  if (
+    count === existingGreetingMessage.length ||
+    count === newGreetingMessage.length
+  ) {
     router.push("/not-found");
   }
   return (
