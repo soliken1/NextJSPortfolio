@@ -2,7 +2,7 @@ import React from "react";
 
 const ActionButton = () => {
   return (
-    <div className="flex flex-row">
+    <div className="flex gap-4 flex-row">
       <button type="button" className="ps-5 pe-5 pt-1 pb-1">
         <label className="text-white font-mono hover:cursor-pointer select-none pointer-events-none">
           Hide
