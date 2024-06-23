@@ -3,13 +3,14 @@ import DialougeMessage from "./DialougeMessage";
 import Portrait from "./Portrait";
 import React from "react";
 import { useState } from "react";
+import { setCookie } from "cookies-next";
 
 const Dialouge = () => {
   const [count, setCount] = useState(0);
   const handleClick = () => {
     setCount(count + 1);
     if (count >= 2) {
-      localStorage.setItem("visited", true);
+      setCookie("hasVisited", true);
     }
   };
   return (
