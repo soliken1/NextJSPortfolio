@@ -1,23 +1,11 @@
 "use client";
 import DialougeMessage from "./DialougeMessage";
 import Portrait from "./Portrait";
-import React, { useState } from "react";
-import { setCookie } from "cookies-next";
-
-const Dialouge = () => {
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => {
-    setCount((prevCount) => prevCount + 1);
-    if (count >= 2) {
-      setCookie("hasVisited", true);
-    }
-  };
-
+const Dialouge = ({ count, onClick }) => {
   return (
     <div
-      className="absolute bottom-0 left-0 bg-black h-40 w-full duration-1000"
-      onClick={handleClick}
+      className="absolute bottom-0 left-0 bg-gray-950 h-40 w-full duration-1000"
+      onClick={onClick}
     >
       <Portrait count={count} />
       <DialougeMessage count={count} />

@@ -11,11 +11,11 @@ const DialougeMessage = ({ count }) => {
   }, []);
   return (
     <div className="flex flex-col gap-2 p-5 duration-1000">
-      <label className="text-white font-mono pointer-events-none select-none">
-        {hasVisited ? "Remilia" : "???"}
+      <label className="text-white font-mono pointer-events-none text-sm select-none md:text-xl">
+        {hasVisited ? "Remilia Scarlet" : "???"}
       </label>
-      <div className="dialouge">
-        <label className="text-white font-mono pointer-events-none select-none">
+      <div className="dialouge w-7/12 h-full md:w-9/12">
+        <label className="text-white font-mono pointer-events-none text-xs select-none md:text-lg">
           {hasVisited
             ? existingGreetingMessage[count]
             : newGreetingMessage[count]}
