@@ -1,6 +1,8 @@
+import React from "react";
 import Construction from "@/components/General/Construction";
-function Skills() {
-  return <Construction />;
-}
 
-export default Skills;
+const page = () => {
+  return <Construction />;
+};
+
+export default page;
