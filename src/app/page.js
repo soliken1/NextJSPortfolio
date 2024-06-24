@@ -1,10 +1,19 @@
 "use client";
-import DialougeContainer from "@/components/Home/DialougeContainer";
+const DialougeContainer = dynamic(
+  () => import("@/components/Home/DialougeContainer"),
+  { ssr: false }
+);
 import TopMenuContainer from "@/components/Home/TopMenuContainer";
-import Selection from "@/components/Home/Selection";
-import PortfolioLoading from "@/components/General/PortfolioLoading";
+const Selection = dynamic(() => import("@/components/Home/Selection"), {
+  ssr: false,
+});
+const PortfolioLoading = dynamic(
+  () => import("@/components/General/PortfolioLoading"),
+  { ssr: false }
+);
 import { useState } from "react";
 import { setCookie } from "cookies-next";
+import dynamic from "next/dynamic";
 
 function Home() {
   const [loading, setLoading] = useState(true);
