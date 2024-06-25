@@ -2,12 +2,15 @@
 import React, { useState } from "react";
 import ProgressLine from "@/components/Skills/ProgressLine";
 import Description from "./Description";
+import PortraitContainer from "./PortraitContainer";
 
 const Stats = () => {
   const [hoveredLabel, setHoveredLabel] = useState(null);
+  const [handleCount, setHandleCount] = useState(0);
 
   const handleMouseEnter = (label) => {
     setHoveredLabel(label);
+    setHandleCount((prevCount) => prevCount + 1);
   };
 
   const handleMouseLeave = () => {
@@ -65,7 +68,7 @@ const Stats = () => {
 
   return (
     <div className="w-screen h-screen flex flex-col md:flex-row">
-      <div className="w-full h-4/5 md:w-1/2 md:h-full flex justify-center flex-col gap-5">
+      <div className="w-full md:w-1/2 h-full flex justify-center flex-col gap-5">
         <div className="flex justify-center items-center mb-0 md:mb-10">
           <label className="text-white font-mono text-2xl">
             Development Skills
@@ -89,12 +92,13 @@ const Stats = () => {
         ))}
       </div>
       <div
-        className={`w-full h-4/5 md:w-1/2 md:h-full flex justify-center flex-col gap-5 transition-colors duration-500 ${hoveredColor}`}
+        className={`w-full md:w-1/2 flex justify-center flex-col gap-5 transition-colors duration-500 ${hoveredColor}`}
       >
-        <Description
-          isHovered={hoveredLabel !== null}
+        <PortraitContainer
           description={hoveredDescription}
+          count={handleCount}
         />
+        <Description isHovered={hoveredLabel !== null} />
       </div>
     </div>
   );

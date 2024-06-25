@@ -21,3 +21,9 @@ export const existingGreetingMessage = [
   "",
   "Annoying...",
 ];
+
+export const talk = [
+  "Hello...",
+  "You know... I had the chance to take over the world...",
+  "Why am I working here anyway?... I wonder",
+];
