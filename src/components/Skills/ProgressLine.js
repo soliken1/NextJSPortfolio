@@ -8,6 +8,8 @@ const ProgressLine = ({
   image,
   backgroundColor,
   visualParts,
+  color,
+  isHovered,
 }) => {
   const [widths, setWidths] = useState(visualParts.map(() => 0));
 
@@ -18,7 +20,11 @@ const ProgressLine = ({
   }, [visualParts]);
 
   return (
-    <div className="flex flex-row h-24 items-center gap-5">
+    <div
+      className={`flex flex-row h-24 items-center gap-5 ps-10 transition-colors duration-300 ${
+        isHovered ? color : ""
+      }`}
+    >
       <Image
         className="bg-white p-1 w-20 h-20 rounded-full object-cover"
         src={image}

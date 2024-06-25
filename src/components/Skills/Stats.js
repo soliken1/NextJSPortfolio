@@ -21,6 +21,7 @@ const Stats = () => {
       expLabel: "1 Month",
       visualParts: [{ percentage: "5%", color: "tan" }],
       description: "Experience with the Next.js framework.",
+      color: "bg-red-500",
     },
     {
       label: "React.js Library",
@@ -28,6 +29,7 @@ const Stats = () => {
       expLabel: "7 Months",
       visualParts: [{ percentage: "35%", color: "tan" }],
       description: "Proficient in building React applications.",
+      color: "bg-blue-500",
     },
     {
       label: "Kotlin Android Development",
@@ -35,6 +37,7 @@ const Stats = () => {
       expLabel: "5 Months",
       visualParts: [{ percentage: "25%", color: "tan" }],
       description: "Developed Android apps using Kotlin.",
+      color: "bg-green-500",
     },
     {
       label: "Flutter",
@@ -42,6 +45,7 @@ const Stats = () => {
       expLabel: "1 Month",
       visualParts: [{ percentage: "5%", color: "tan" }],
       description: "Basic knowledge of Flutter for cross-platform development.",
+      color: "bg-yellow-500",
     },
     {
       label: "ASP.Net MVC Framework",
@@ -49,15 +53,19 @@ const Stats = () => {
       expLabel: "12 Months",
       visualParts: [{ percentage: "60%", color: "tan" }],
       description: "Extensive experience with ASP.Net MVC framework.",
+      color: "bg-purple-500",
     },
   ];
 
   const hoveredDescription =
     progressData.find((data) => data.label === hoveredLabel)?.description || "";
+  const hoveredColor =
+    progressData.find((data) => data.label === hoveredLabel)?.color ||
+    "bg-gray-950";
 
   return (
     <div className="w-screen h-screen flex flex-col md:flex-row">
-      <div className="w-full h-4/5 md:w-1/2 md:h-full flex justify-center p-20 flex-col gap-5">
+      <div className="w-full h-4/5 md:w-1/2 md:h-full flex justify-center flex-col gap-5">
         <div className="flex justify-center items-center mb-0 md:mb-10">
           <label className="text-white font-mono text-2xl">
             Development Skills
@@ -74,11 +82,15 @@ const Stats = () => {
               image={data.image}
               expLabel={data.expLabel}
               visualParts={data.visualParts}
+              color={data.color}
+              isHovered={hoveredLabel === data.label}
             />
           </div>
         ))}
       </div>
-      <div className="w-full h-4/5 md:w-1/2 md:h-full flex justify-center flex-col gap-5">
+      <div
+        className={`w-full h-4/5 md:w-1/2 md:h-full flex justify-center flex-col gap-5 transition-colors duration-500 ${hoveredColor}`}
+      >
         <Description
           isHovered={hoveredLabel !== null}
           description={hoveredDescription}
