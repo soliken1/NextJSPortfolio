@@ -23,7 +23,7 @@ export const existingGreetingMessage = [
 ];
 
 export const talk = [
-  "Hello...",
+  "Tea...",
   "You know... I had the chance to take over the world...",
-  "Why am I working here anyway?... I wonder",
+  "Why am I working here anyway?... I wonder...",
 ];

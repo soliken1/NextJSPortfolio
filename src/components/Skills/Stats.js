@@ -23,7 +23,7 @@ const Stats = () => {
       image: "/Logo/Next.png",
       expLabel: "1 Month",
       visualParts: [{ percentage: "5%", color: "tan" }],
-      description: "Experience with the Next.js framework.",
+      description: "In comparison... This is a small fly's lifespan to me...",
       color: "bg-red-500",
     },
     {
@@ -31,7 +31,7 @@ const Stats = () => {
       image: "/Logo/React.png",
       expLabel: "7 Months",
       visualParts: [{ percentage: "35%", color: "tan" }],
-      description: "Proficient in building React applications.",
+      description: "Impressive.",
       color: "bg-blue-500",
     },
     {
@@ -39,7 +39,7 @@ const Stats = () => {
       image: "/Logo/Android.png",
       expLabel: "5 Months",
       visualParts: [{ percentage: "25%", color: "tan" }],
-      description: "Developed Android apps using Kotlin.",
+      description: "...",
       color: "bg-green-500",
     },
     {
@@ -47,7 +47,7 @@ const Stats = () => {
       image: "/Logo/Flutter.png",
       expLabel: "1 Month",
       visualParts: [{ percentage: "5%", color: "tan" }],
-      description: "Basic knowledge of Flutter for cross-platform development.",
+      description: "Only?",
       color: "bg-yellow-500",
     },
     {
@@ -55,7 +55,7 @@ const Stats = () => {
       image: "/Logo/ASP.png",
       expLabel: "12 Months",
       visualParts: [{ percentage: "60%", color: "tan" }],
-      description: "Extensive experience with ASP.Net MVC framework.",
+      description: "My my... This one is quite tedious...",
       color: "bg-purple-500",
     },
   ];
