@@ -26,7 +26,7 @@ const Projects = () => {
   }
 
   return (
-    <div className="h-svh w-screen bg-gray-950 flex flex-col justify-center items-center">
+    <div className="h-full w-screen bg-gray-950 flex flex-col justify-center items-center">
       <TopMenuContainer />
       <ProjectContainer />
     </div>

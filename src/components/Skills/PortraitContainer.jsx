@@ -23,7 +23,7 @@ const PortraitContainer = ({ count, description }) => {
   }, [count]);
 
   return (
-    <div className="relative w-full  h-lvh flex flex-col justify-center items-center">
+    <div className="relative w-full h-lvh flex flex-col justify-center items-center">
       <Image
         alt="remilia"
         className="absolute translate-y-5 bottom-0 w-1/2 h-1/2 z-1 object-cover"

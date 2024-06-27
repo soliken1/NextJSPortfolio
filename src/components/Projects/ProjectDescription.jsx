@@ -1,7 +1,7 @@
 import React from "react";
 
 const ProjectDescription = () => {
-  return <div className="w-full md:w-5/12 h-full"></div>;
+  return <div className="w-full md:w-5/12 h-lvh"></div>;
 };
 
 export default ProjectDescription;
