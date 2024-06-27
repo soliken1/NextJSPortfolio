@@ -25,12 +25,20 @@ function Home() {
       setCookie("hasVisited", true);
     }
   };
+
   setTimeout(() => {
     setLoading(false);
   }, 2000);
+
   if (loading) {
-    return <PortfolioLoading />;
+    return (
+      <PortfolioLoading
+        classes="font-mono text-2xl text-white"
+        label="Portfolio"
+      />
+    );
   }
+
   return (
     <div className="bg-slate-950 h-screen w-screen">
       <TopMenuContainer />
