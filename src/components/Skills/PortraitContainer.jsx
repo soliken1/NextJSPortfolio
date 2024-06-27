@@ -25,6 +25,7 @@ const PortraitContainer = ({ count, description }) => {
   return (
     <div className="relative w-full  h-lvh flex flex-col justify-center items-center">
       <Image
+        alt="remilia"
         className="absolute translate-y-5 bottom-0 w-1/2 h-1/2 z-1 object-cover"
         src={`/Remilia_Sprites/${full_portrait[count]}`}
         width={500}
