@@ -9,7 +9,7 @@ const PortfolioLoading = dynamic(
   { ssr: false }
 );
 
-const page = () => {
+const Projects = () => {
   const [loading, setLoading] = useState(true);
 
   setTimeout(() => {
@@ -33,4 +33,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Projects;
