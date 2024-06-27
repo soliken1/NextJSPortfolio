@@ -24,7 +24,7 @@ const Stats = () => {
       expLabel: "1 Month",
       visualParts: [{ percentage: "5%", color: "tan" }],
       description: "In comparison... This is a small fly's lifespan to me...",
-      color: "bg-red-500",
+      color: "bg-rose-600",
     },
     {
       label: "React.js Library",
@@ -32,7 +32,7 @@ const Stats = () => {
       expLabel: "7 Months",
       visualParts: [{ percentage: "35%", color: "tan" }],
       description: "Impressive.",
-      color: "bg-blue-500",
+      color: "bg-rose-700",
     },
     {
       label: "Kotlin Android Development",
@@ -40,7 +40,7 @@ const Stats = () => {
       expLabel: "5 Months",
       visualParts: [{ percentage: "25%", color: "tan" }],
       description: "...",
-      color: "bg-green-500",
+      color: "bg-rose-800",
     },
     {
       label: "Flutter",
@@ -48,7 +48,7 @@ const Stats = () => {
       expLabel: "1 Month",
       visualParts: [{ percentage: "5%", color: "tan" }],
       description: "Only?",
-      color: "bg-yellow-500",
+      color: "bg-rose-900",
     },
     {
       label: "ASP.Net MVC Framework",
@@ -56,7 +56,7 @@ const Stats = () => {
       expLabel: "12 Months",
       visualParts: [{ percentage: "60%", color: "tan" }],
       description: "My my... This one is quite tedious...",
-      color: "bg-purple-500",
+      color: "bg-rose-950",
     },
   ];
 
