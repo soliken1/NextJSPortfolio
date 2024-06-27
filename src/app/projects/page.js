@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import dynamic from "next/dynamic";
 import TopMenuContainer from "@/components/Home/TopMenuContainer";
 import ProjectContainer from "@/components/Projects/ProjectContainer";
