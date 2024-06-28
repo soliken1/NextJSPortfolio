@@ -1,56 +1,78 @@
 import React from "react";
 import Project from "./Project";
-import ProjectDescription from "./ProjectDescription";
 
 const ProjectContainer = () => {
   const projects = [
     {
       label: "NextJS Portfolio",
+      role: "Solo / Frontend Developer",
       description: "",
+      stars: 2,
     },
     {
       label: "NextJS Listening Party",
+      role: "Solo / Fullstack Developer",
       description: "",
+      stars: 4,
     },
     {
       label: "PSITS System",
+      role: "SYSARCH Special Project Team / Project Manager",
       description: "",
+      stars: 5,
     },
     {
       label: "Trabahub",
+      role: "Alvin John & Ken James / Fullstack Developer",
       description: "",
+      stars: 5,
     },
     {
       label: "Listening Party Flutter",
+      role: "Solo / Fullstack Developer",
       description: "",
+      stars: 4,
     },
     {
       label: "Woodables Mobile",
+      role: "Woodables Team / Backend Developer",
       description: "",
+      stars: 3,
     },
     {
       label: "Listening Party React + Firebase",
+      role: "Solo / Fullstack Developer",
       description: "",
+      stars: 3,
     },
     {
       label: "Small Sidescroller Game",
+      role: "Solo / Frontend Developer",
       description: "",
+      stars: 2,
     },
     {
       label: "Findy",
+      role: "Solo / Frontend Developer",
       description: "",
+      stars: 2,
     },
   ];
   return (
-    <div className="w-full h-full mt-16 md:mt-0 md:h-2/3 flex items-center flex-col md:flex-row">
-      <div className="h-lvh md:h-svh mt-16 mb-16 p-20 w-full flex flex-col gap-2 overflow-auto">
-        {projects.map((project, index) => (
-          <div className="" key={index}>
-            <Project label={project.label} />
-          </div>
-        ))}
-      </div>
-      <ProjectDescription />
+    <div className="h-screen w-full p-20 flex items-end flex-col gap-5 overflow-auto">
+      {projects.map((project, index) => (
+        <div
+          className="w-full md:w-1/3 h-1/6 md:h-28 p-5 rounded-2xl bg-black"
+          key={index}
+        >
+          <Project
+            label={project.label}
+            role={project.role}
+            description={project.description}
+            stars={project.stars}
+          />
+        </div>
+      ))}
     </div>
   );
 };
