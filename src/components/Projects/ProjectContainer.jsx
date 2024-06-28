@@ -59,20 +59,23 @@ const ProjectContainer = () => {
     },
   ];
   return (
-    <div className="h-screen w-full p-20 flex items-end flex-col gap-5 overflow-auto">
-      {projects.map((project, index) => (
-        <div
-          className="w-full md:w-1/3 h-1/6 md:h-28 p-5 rounded-2xl bg-black"
-          key={index}
-        >
-          <Project
-            label={project.label}
-            role={project.role}
-            description={project.description}
-            stars={project.stars}
-          />
-        </div>
-      ))}
+    <div className="h-screen w-full ps-16 pt-20 pe-16 flex justify-start gap-5 flex-row overflow-auto">
+      <div className="md:w-2/3 h-lvh"></div>
+      <div className="md:w-1/2 flex flex-col gap-5">
+        {projects.map((project, index) => (
+          <div
+            className="w-full  h-1/6 md:h-28 p-5 rounded-2xl bg-slate-800 shadow-slate-900 shadow-md"
+            key={index}
+          >
+            <Project
+              label={project.label}
+              role={project.role}
+              description={project.description}
+              stars={project.stars}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
